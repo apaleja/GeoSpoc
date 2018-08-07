@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>GeoSpoc Exercise 1 | GIS Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' href='lib/bootstrap.min.css'>
+  <link rel='stylesheet' href='lib/leaflet/leaflet.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container" id="app">
+      <div class="map" id="map"></div>
+      <div class="ac-pc-style">
+          <button
+                  type="button"
+                  v-on:click="onLayerStyleClick">
+              {{styleBtnText}}
+          </button>
+          <select @change="onStatusChange">
+              <option value="">All Status</option>
+              <option v-for="status in acData.status" :value="status">{{ status }}</option>
+          </select>
+      </div>
+    </div>
+  </div>
+  <script src="lib/jquery-3.3.1.min.js"></script>
+  <script src='lib/vue.min.js'></script>
+  <script src='lib/leaflet/leaflet.js'></script>
+
+  <script src="lib/catiline.js"></script>
+  <script src="lib/leaflet.shpfile.js"></script>
+
+  <script  src="js/index.js"></script>
+
+</body>
+
+</html>
